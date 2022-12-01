@@ -1,8 +1,5 @@
 
 max = 0
-max2 = 0
-max3 = 0
-
 
 with open("input1.txt") as f:
 	lines = f.readlines()
@@ -19,28 +16,8 @@ with open("input1.txt") as f:
 			running_total += int(num)
 		else:
 			if running_total > max:
-				max3 = max2
-				max2 = max
 				max = running_total
-			elif running_total > max2:
-				max3 = max2
-				max2 = running_total
-			elif running_total > max3:
-				max3 = running_total
 			running_total = 0
 	if running_total > max:
-		max3 = max2
-		max2 = max
 		max = running_total
-	elif running_total > max2:
-		max3 = max2
-		max2 = running_total
-	elif running_total > max3:
-		max3 = running_total
-		running_total = 0
-
-
 print(max)
-print(max2)
-print(max3)
-print(max + max2 + max3)
