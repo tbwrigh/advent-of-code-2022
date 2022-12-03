@@ -18,7 +18,6 @@ with open("input.txt") as f:
             total -= 6
         else:
             c = c.upper()
-        print(c, c_org, ord(c) - ord("A") + 1)
         total += ord(c) - ord("A") + 1
 
 print(total)
